@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Paises</title>
 </head>
 <body>
   <table class="table table-bordered">
@@ -14,9 +14,9 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="elemento : ${listado}">
+    <tr>
       <td th:text="${elemento.id}">ID</td>
-      <td><a th:href="@{/paises/{id}(id=${elemento.id})}" th:text="${elemento.nombre}">Nombre</a></td>
+      <td th:text="${elemento.nombre}">Nombre</td>
       <td th:text="${elemento.region.nombre}">Región</td>
     </tr>
     </tbody>
