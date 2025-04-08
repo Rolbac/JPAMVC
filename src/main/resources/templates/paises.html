@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Región</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="elemento : ${listado}">
+      <td th:text="${elemento.id}">ID</td>
+      <td><a th:href="@{/paises/{id}(id=${elemento.id})}" th:text="${elemento.nombre}">Nombre</a></td>
+      <td th:text="${elemento.region.nombre}">Región</td>
+    </tr>
+    </tbody>
+  </table>
+</body>
+</html>
