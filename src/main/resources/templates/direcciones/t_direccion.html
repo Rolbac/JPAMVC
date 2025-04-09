@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${elemento.direccionCalle}">Pais</title>
+</head>
+<body>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Direccion Calle</th>
+      <th>Codigo Postal</th>
+      <th>Ciudad</th>
+      <th>Provincia</th>
+      <th>Pais</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td th:text="${elemento.id}">ID</td>
+      <td th:text="${elemento.direccionCalle}">Direccion calle</td>
+      <td th:text="${elemento.codigoPostal}">Codigo Postal</td>
+      <td th:text="${elemento.ciudad}">Ciudad</td>
+      <td th:text="${elemento.provincia}">Provincia</td>
+      <td th:text="${elemento.pais.nombre}">Pais</td>
+    </tr>
+    </tbody>
+  </table>
+  <p><a th:href="@{/direcciones/e/{id}(id=${elemento.id})}">Editar Direccion</a></p>
+  <p><a th:href="@{/direcciones/d/{id}(id=${elemento.id})}">Eliminar Direccion</a></p>
+  <p><a th:href="@{/direcciones}">Volver a Direcciones</a></p>
+</body>
+</html>
