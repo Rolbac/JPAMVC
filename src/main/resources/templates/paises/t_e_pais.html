@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/paises/e}" th:object="${elemento}" method="post">
+  <div>
+    <label for="id">ID país:</label>
+    <input type="text" id="id" th:field="*{id}" required />
+  </div>
+  <div>
+    <label for="nombre">Nombre país:</label>
+    <input type="text" id="nombre" th:field="*{nombre}" required />
+  </div>
+  <label for="region">Región:</label>
+  <select id="region" th:field="*{region}">
+    <option th:each="region : ${listado}"
+            th:value="${region.id}"
+            th:text="${region.nombre}"></option>
+  </select>
+  <button>Enviar</button>
+</form>
+</body>
+</html>

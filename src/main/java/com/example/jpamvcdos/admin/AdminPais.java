@@ -12,4 +12,6 @@ public interface AdminPais {
     Pais grabarPais(Pais pais);
 
     void eliminarPais(String id);
+
+    Pais editarPais(Pais pais);
 }

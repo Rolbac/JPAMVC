@@ -34,4 +34,10 @@ public class AdminPaisImpl implements AdminPais{
     public void eliminarPais(String id) {
         repoPais.deleteById(id);
     }
+
+    @Override
+    public Pais editarPais(Pais pais) {
+        return repoPais.save(pais);
+    }
+
 }
