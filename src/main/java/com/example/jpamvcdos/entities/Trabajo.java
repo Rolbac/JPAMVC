@@ -2,6 +2,7 @@ package com.example.jpamvcdos.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 import java.util.Objects;
@@ -10,6 +11,7 @@ import java.util.Objects;
 @Table(name="JOBS")
 public class Trabajo {
 
+    @Id
     @Column(name="JOB_ID")
     private String idJob;
     @Column(name="JOB_TITLE")

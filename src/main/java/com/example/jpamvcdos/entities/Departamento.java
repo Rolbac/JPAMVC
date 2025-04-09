@@ -12,11 +12,11 @@ public class Departamento {
     @Id
     @Column(name="DEPARTMENT_ID")
     private Integer idDepartamento;
-    @Column(name="DEPARTMENT_NAME")
-    private String nombre;
-    @Column(name="MANAGER_ID")
-    private Empleado manager;
-    @Column(name="LOCATION_ID")
-    private Integer idLocation;
+//    @Column(name="DEPARTMENT_NAME")
+//    private String nombre;
+//    @Column(name="MANAGER_ID")
+//    private Empleado manager;
+//    @Column(name="LOCATION_ID")
+//    private Integer idLocation;
 
 }

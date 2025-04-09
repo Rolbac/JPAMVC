@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Direcciones</title>
+</head>
+<body>
+    <table class="table table-bordered" th:if="${listado != null}">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Direccion Calle</th>
+            <th>Codigo Postal</th>
+            <th>Ciudad</th>
+            <th>Provincia</th>
+            <th>Pais</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="elemento : ${listado}">
+            <td th:text="${elemento.id}">ID</td>
+            <td><a th:href="@{/direcciones/{id}(id=${elemento.id})}" th:text="${elemento.direccionCalle}">Calle</a></td>
+            <td th:text="${elemento.codigoPostal}">CodigoPostal</td>
+            <td th:text="${elemento.ciudad}">Ciudad</td>
+            <td th:text="${elemento.provincia}">Provincia</td>
+            <td th:text="${elemento.pais.nombre}">Pais</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
